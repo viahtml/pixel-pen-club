@@ -1,0 +1,189 @@
+/**********
+THEMES
+
+SHORT & SWEET - gradients, textures, soft, shadows, rounded edges
+SUPERNOVA - edgy, borders, solid colors
+LITTLE LIGHT - simple, easy to use
+**********/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+img {
+    object-fit: cover;
+    object-position: center center;
+}
+
+body {
+    --clear: rgba(0,0,0,0);
+}
+
+/**********
+SHORT & SWEET
+**********/
+
+/**********
+SHORT & SWEET
+COMMUNICATIONS
+**********/
+
+i-sns-comm1 {
+    position:relative;
+    display:grid;
+    grid-template-areas:
+        "topper"
+        "contact"
+        "msgs"
+        "send";
+    grid-template-rows: 130px 100px auto 70px;
+    grid-gap:10px;
+    margin:30px auto;
+    width:330px;
+    height:auto;
+    background:var(--bg2);
+    border-radius:15px;
+    text-align:justify;
+    overflow:hidden;
+}
+
+i-sns-comm1 topper {
+    position:relative;
+    grid-area: topper;
+    width:100%;
+    height:130px;
+    display:flex;
+    flex-flow:row;
+    justify-content: flex-start;
+    align-items: center;
+    gap:10px;
+    padding:30px;
+    background:var(--grad2-hx);
+    font:800 11px var(--body);
+    text-transform:uppercase;
+}
+
+i-sns-comm1 topper img {
+    width:30px;
+    height:30px;
+    border-radius:5px;
+}
+
+i-sns-comm1 contact-info {
+    grid-area: contact;
+    position:relative;
+    display:flex;
+    flex-flow:row;
+    justify-content: space-between;
+    align-items: center;
+    margin:-40px 30px 10px;
+    padding:30px;
+    background:var(--bg1);
+    border-radius:10px;
+    z-index:2;
+}
+
+i-sns-comm1 contact-info contact {
+    display:flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+}
+
+i-sns-comm1 contact-info x {
+    font: 800 25px var(--txt-one);
+    text-transform:lowercase;
+}
+
+i-sns-comm1 contact-info x span {
+    background-image: var(--grad1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--clear);
+}
+
+i-sns-comm1 contact-info y {
+    font:800 11px var(--body);
+    text-transform:uppercase;
+    border-top:1px solid var(--acc2);
+}
+
+i-sns-comm1 contact-info emoji {
+    font-size:25px;
+    font-family:var(--emo);
+}
+
+i-sns-comm1 .msgs {
+    grid-area: msgs;
+    position:relative;
+    padding:10px 30px;
+    max-height:280px;
+    overflow:auto;
+}
+
+i-sns-comm1 .msgs p {
+    position:relative;
+    float:left;
+    clear:both;
+    margin:5px 0;
+    padding:15px;
+    font:13px var(--body);
+    background:var(--grad2-hx);
+    border-radius: 0 10px 10px;
+}
+
+i-sns-comm1 .msgs x {
+    position:relative;
+    display:block;
+    clear:both;
+    font:13px var(--body);
+}
+
+i-sns-comm1 .msgs b {
+    color:var(--acc2);
+}
+
+i-sns-comm1 .msgs i {
+    color:var(--acc3);
+}
+
+i-sns-comm1 .msgs u {
+    text-decoration-style: dashed;
+    text-decoration-color:var(--acc);
+}
+
+i-sns-comm1 send {
+    position:relative;
+    display:flex;
+    flex-flow:row;
+    justify-content: space-between;
+    align-items: center;
+    margin:15px 30px;
+    padding:0 10px;
+    background:var(--bg1);
+    border-radius:5px;
+}
+
+i-sns-comm1 send type {
+    font:800 11px var(--body);
+    text-transform:uppercase;
+    display:flex;
+    flex-flow:row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+i-sns-comm1 send type::before {
+    content:'you are connected';
+}
+
+i-sns-comm1 send emoji {
+    width: 30px;
+    height: 30px;
+    background: var(--gicon);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
